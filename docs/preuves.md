@@ -1,7 +1,5 @@
 # Preuves de validation du TD2
 
-Source : PDF de travail fourni par l’étudiante, `TD2`, **17 pages**. Les images ci-dessous ont été extraites des images embarquées, sans recréer les sorties. La numérotation renvoie aux pages de ce PDF, pas à celles de l’énoncé de 36 pages. Les captures de configuration montrant le mot de passe de la VM n’ont pas été reprises.
-
 | Demande du professeur | Preuve disponible | Page source |
 |---|---|---|
 | Arborescence et architecture | README | Dépôt |

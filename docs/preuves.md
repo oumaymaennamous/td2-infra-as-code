@@ -14,9 +14,6 @@ Source : PDF de travail fourni par l’étudiante, `TD2`, **17 pages**. Les imag
 | Ansible `changed=0` | [07 — idempotence Ansible](captures/07-ansible-idempotence.png), `ok=14 changed=0 failed=0` | 16 |
 | Trois upgrades Helm `deployed`, révision 2 | [08 — upgrades Helm](captures/08-helm-upgrade.png) | 16 |
 | Self-healing frontend et HTTP 200 | [09 — self-healing](captures/09-self-healing.png) | 17 |
-| Bonus : structure de la table `visits` | [10 — migration SQL](captures/10-bonus-migration.png) | 17 |
-| Destruction de 7 ressources | **Pas de capture fournie** | À effectuer |
-| Bonus complet : card, compteur, rollout et rollback 404 | **Non attesté par les captures fournies** | À effectuer |
 
 ## Sorties relevées dans les captures
 

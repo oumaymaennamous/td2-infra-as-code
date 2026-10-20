@@ -6,6 +6,8 @@ NovaShop est une application 3-tiers déployée dans le namespace `td2` d’un c
 
 ## Livrables
 
+- **[Réponses aux 5 questions de réflexion](docs/reflexion.md)** : data sources, responsabilités des outils, StatefulSet, tunnel SSH et destruction.
+
 - **[Captures et correspondance avec les consignes](docs/preuves.md)** : Les captures
 - code source 
 

@@ -4,6 +4,8 @@
 
 ## Livrables
 
+- **[Rapport TD2 — PDF de 3 pages](docs/compte-rendu-td2.pdf)** : architecture, preuves de validation et réponses aux 5 questions.
+
 - **[Réponses aux 5 questions de réflexion](docs/reflexion.md)** : data sources, responsabilités des outils, StatefulSet, tunnel SSH et destruction.
 
 - **[Captures et correspondance avec les consignes](docs/preuves.md)** : Les captures

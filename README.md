@@ -50,7 +50,7 @@ Terraform provisionne l’infrastructure. Ansible configure la VM et installe K3
 | `helm/postgres/` | StatefulSet, Service headless, initialisation SQL et PVC |
 | `helm/backend/` | API Python, Deployment et Service |
 | `helm/frontend/` | nginx, HTML/JS, Deployment, Service et Ingress |
-| `docs/` | Captures de validation et index des preuves |
+| `docs/` | Captures de validation et index des preuves et réponses aux questions |
 
 Terraform gère **7 ressources** : 1 groupe de sécurité + 3 règles + 1 VM + 1 IP flottante + 1 association. Le réseau, le sous-réseau, le réseau externe, l’image, le flavor et la paire de clés sont consultés via des data sources, sans être recréés.
 

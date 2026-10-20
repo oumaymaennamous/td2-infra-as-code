@@ -176,8 +176,3 @@ rm -f ansible/kubeconfig ansible/inventory.ini
 
 Le réseau, le routeur, l’image, le projet et la paire de clés du TD1 subsistent volontairement. Le PVC `local-path` utilise le disque de la VM : la suppression de cette VM entraîne la perte de ses données locales. **Aucune capture de `terraform destroy` n’a été fournie.**
 
-## Sources des preuves
-
-- Énoncé : *TD2 — Industrialiser K3s avec Terraform, Ansible et Helm*, version 2, 36 pages.
-- Captures : document de travail *TD2*, 17 pages, fourni par l’étudiante.
-- Les PNG détaillés sont dans `docs/captures/`. L’index [docs/preuves.md](docs/preuves.md) précise les pages sources et les validations encore sans capture.

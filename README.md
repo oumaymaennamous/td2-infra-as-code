@@ -145,18 +145,5 @@ helm upgrade frontend ./helm/frontend -n td2
 kubectl -n td2 get pods -o custom-columns=NAME:.metadata.name,UID:.metadata.uid
 ```
 
-## Bonus — compteur de visites
-
-La capture p. 17 montre la table `visits` créée, et le backend du dépôt contient `/api/visits`. Le frontend ne contient pas encore la card ni le fetch correspondant. Le cycle complet modification → upgrade → rollout → rollback n’est donc **pas attesté**.
-
-L’énoncé demande une migration SQL manuelle avant le nouveau backend, puis les upgrades backend et frontend. Les scripts d’initialisation PostgreSQL ne rejouent pas sur une base déjà présente dans le PVC. Pour prouver le rollback, choisir dans `helm history backend -n td2` une révision réellement antérieure au bonus, puis vérifier le **GET** `/api/visits` :
-
-```bash
-# Après un rollback vers une révision sans /api/visits :
-curl -s -o /dev/null -w '%{http_code}\n' "http://$FIP/api/visits"
-# Attendu : 404. Ne pas utiliser curl -I : l’API Python ne définit pas HEAD.
-```
-
-Les preuves de compteur, rollout et rollback restent à ajouter si ce bonus est rendu.
 
  

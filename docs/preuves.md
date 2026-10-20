@@ -108,9 +108,3 @@ Suppression d’un pod frontend, recréation et réponse HTTP 200. Source : p. 1
 
 ![9. Self-healing](captures/09-self-healing.png)
 
-## 10. Bonus — migration SQL
-
-Structure de la table `visits` : `id`, `pod_name`, `created_at`. Source : p. 17. Cette preuve ne couvre pas le compteur frontend ni le rollback.
-
-![10. Bonus — migration SQL](captures/10-bonus-migration.png)
-

@@ -159,20 +159,4 @@ curl -s -o /dev/null -w '%{http_code}\n' "http://$FIP/api/visits"
 
 Les preuves de compteur, rollout et rollback restent à ajouter si ce bonus est rendu.
 
-## Destruction — après toutes les captures
-
-**La destruction supprime les données. Elle n’a pas été réalisée pendant la préparation de ce rendu.** Conserver d’abord toutes les preuves, puis exécuter sur DevStack :
-
-```bash
-helm uninstall frontend backend postgres -n td2
-kubectl -n td2 delete pvc --all
-kubectl delete namespace td2
-terraform -chdir=terraform destroy -var='login=ennamous'
-# Conserver la sortie attendue : Destroy complete! Resources: 7 destroyed.
-# Fermer le tunnel dans son terminal, puis nettoyer les fichiers locaux :
-unset KUBECONFIG
-rm -f ansible/kubeconfig ansible/inventory.ini
-```
-
-Le réseau, le routeur, l’image, le projet et la paire de clés du TD1 subsistent volontairement. Le PVC `local-path` utilise le disque de la VM : la suppression de cette VM entraîne la perte de ses données locales. **Aucune capture de `terraform destroy` n’a été fournie.**
-
+ 

@@ -1,8 +1,4 @@
-# TD2 — Réponses aux 5 questions de réflexion
-
-**Oumayma Ennamous · 5e année · Architecture logicielle / IaC**
-
-Les réponses ci-dessous s’appuient sur l’architecture NovaShop et les fichiers Terraform, Ansible et Helm du dépôt.
+# TD2 — Réponses aux 4 questions de réflexion
 
 ## Q1 — Pourquoi utilise-t-on des data sources pour `asl-net` et pas des resources ? Que se passerait-il si on inversait ?
 

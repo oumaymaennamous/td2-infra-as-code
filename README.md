@@ -2,8 +2,6 @@
 
 **Oumayma Ennamous · 5e année · Architecture logicielle / IaC · DevStack**
 
-NovaShop est une application 3-tiers déployée dans le namespace `td2` d’un cluster K3s mono-nœud : **nginx ×2 → API Python ×2 → PostgreSQL** avec un PVC de 1 Gi.
-
 ## Livrables
 
 - **[Réponses aux 5 questions de réflexion](docs/reflexion.md)** : data sources, responsabilités des outils, StatefulSet, tunnel SSH et destruction.

@@ -65,11 +65,7 @@ source ~/devstack/asl-openrc
 openstack token issue
 ```
 
-Le dépôt contient la configuration pédagogique du labo avec des mots de passe en clair, comme lors de l’exécution capturée. Les états Terraform, fichiers `*.tfvars`, inventaire et kubeconfig sont exclus par `.gitignore`. Ne pas ajouter de credentials OpenStack ni de clés privées aux preuves publiées.
-
 ## Déploiement : ordre des opérations
-
-**Avant de reproduire :** `ansible/playbook.yml` référence le rôle `kubeconfig`, absent du dépôt, et le script de tunnel utilise un chemin fixe. Les captures montrent un environnement fonctionnel, mais le dépôt seul ne permet pas actuellement une reproduction complète sans ces éléments.
 
 Depuis la racine du dépôt :
 

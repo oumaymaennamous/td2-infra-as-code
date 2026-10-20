@@ -6,9 +6,8 @@ NovaShop est une application 3-tiers déployée dans le namespace `td2` d’un c
 
 ## Livrables
 
-- **[Captures et correspondance avec les consignes](docs/preuves.md)** : images originales extraites du document de travail fourni.
-
-Les dossiers `terraform/`, `ansible/` et `helm/` étaient déjà organisés dans le dépôt. Le README présente le fonctionnement du code existant et les preuves de validation. Les captures attestent l’exécution réalisée pendant le TD ; les commandes n’ont pas été relancées sur DevStack lors de la préparation du documentation. Les sorties transcrites renvoient aux pages du document source de 17 pages.
+- **[Captures et correspondance avec les consignes](docs/preuves.md)** : Les captures
+- code source 
 
 ## Architecture
 

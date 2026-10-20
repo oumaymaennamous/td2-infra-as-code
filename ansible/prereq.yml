@@ -1,0 +1,6 @@
+---
+- name: Preparer la VM K3s
+  hosts: k3s
+  become: true
+  roles:
+    - k3s-prereq

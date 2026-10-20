@@ -45,19 +45,3 @@ Le port 6443 donne accès à l’API d’administration Kubernetes : le laisser 
 Le tunnel SSH transporte les requêtes de Helm et kubectl depuis `127.0.0.1:6443` sur DevStack vers `127.0.0.1:6443` sur la VM, via le port SSH 22 déjà autorisé.  
 Nous conservons ainsi un accès d’administration chiffré et authentifié par SSH, ainsi que l’authentification et la vérification TLS Kubernetes du kubeconfig, sans ouvrir un port supplémentaire.
 
-## Q5 — Après `terraform destroy`, quelles ressources OpenStack subsistent ? Pourquoi est-ce volontaire ?
-
-Après une destruction réussie, le **socle préexistant du TD1 reste en place** :
-
-- le projet OpenStack et l’utilisateur ;
-- le réseau privé `asl-net`, son sous-réseau `asl-subnet` et le routeur du TD1 ;
-- le réseau externe `public` ;
-- l’image Ubuntu, le flavor et la paire de clés `asl-key`.
-
-Ces objets sont consultés par des data sources ou restent en dehors de ce projet Terraform. **Lire une ressource existante ne donne pas à Terraform la responsabilité de la détruire.**
-
-Terraform supprime les **7 ressources gérées par ce projet** : la VM, le groupe de sécurité, ses trois règles d’entrée, l’IP flottante et son association Neutron. Le port réseau créé avec la VM est normalement supprimé avec celle-ci ; sa consultation par une data source ne le protège pas de ce cycle de vie.
-
-Cette séparation est volontaire : nous pouvons supprimer l’environnement NovaShop sans casser le réseau ni les ressources partagées nécessaires aux autres travaux. Avant de détruire la VM, l’énoncé demande également de désinstaller les releases Helm et de supprimer les PVC ainsi que le namespace `td2`.
-
-**Il s’agit du résultat attendu : les captures disponibles ne contiennent pas encore la preuve d’exécution de `terraform destroy`.**
